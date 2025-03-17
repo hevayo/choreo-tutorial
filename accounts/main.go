@@ -57,7 +57,7 @@ func main() {
 	r := mux.NewRouter()
 	
 	// API routes
-	api := r.PathPrefix("/api/v1").Subrouter()
+	api := r.PathPrefix("/").Subrouter()
 	
 	// Bill handlers
 	billHandler := handlers.NewBillHandler(database)
