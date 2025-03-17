@@ -6,7 +6,7 @@ import axios from 'axios';
 
 // Create axios instance with base URL from environment variables
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:3001/api'
+  baseURL: 'choreo-apis/expense-tracker/bffapi/v1.0'
 });
 
 // Define interfaces matching API responses
