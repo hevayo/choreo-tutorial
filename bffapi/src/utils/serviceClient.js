@@ -4,10 +4,13 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 // Create axios instances for each backend service with base URLs from environment variables
+const accountServiceurl = process.env.CHOREO_ACCOUNTS_SERVICEURL;
+const accountChoreoapikey = process.env.CHOREO_ACCOUNTS_CHOREOAPIKEY;
 const accountsClient = axios.create({
-  baseURL: process.env.ACCOUNTS_API_URL,
+  baseURL: accountServiceurl,
   headers: {
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
+    'Choreo-API-Key': `${accountChoreoapikey}`
   }
 });
 
